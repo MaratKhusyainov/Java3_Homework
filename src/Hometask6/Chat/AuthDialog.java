@@ -1,8 +1,8 @@
-package Hometask2;
+package Hometask6.Chat;
 
-import Hometask2.Multiscene.ChatSceneApp;
-import Hometask2.Multiscene.SceneFlow;
-import Hometask2.Multiscene.Stageable;
+import Hometask6.Chat.Multiscene.ChatSceneApp;
+import Hometask6.Chat.Multiscene.SceneFlow;
+import Hometask6.Chat.Multiscene.Stageable;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +20,7 @@ import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+//контроллер сцены LOGIN
 public class AuthDialog implements Stageable, Initializable {
     private Stage stage;
     public Socket socket = ChatSceneApp.getScenes().get(SceneFlow.CHAT).getSocket();
@@ -100,7 +101,7 @@ public class AuthDialog implements Stageable, Initializable {
             }
             if (authOk) {
                 stage.setScene(ChatSceneApp.getScenes().get(SceneFlow.CHAT).getScene());
-                stage.setTitle("Hometask6/Chat");
+                stage.setTitle("Chat");
             }
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -120,4 +121,12 @@ public class AuthDialog implements Stageable, Initializable {
     public void setStage(Stage stage) {
         this.stage = stage;
     }
+
+
 }
+
+
+
+
+
+
